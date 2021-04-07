@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PoCheckboxGroupOption, PoDialogService, PoModalAction, PoModalComponent, PoRadioGroupOption } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gerenciador-tarefas-alunos';
+  
 }

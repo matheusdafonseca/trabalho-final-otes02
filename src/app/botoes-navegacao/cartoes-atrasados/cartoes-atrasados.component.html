@@ -1,0 +1,36 @@
+<po-page-default p-title="Gerenciador de Tarefas para Alunos" class="po-text-center"> 
+
+    <app-botao-adicionar-cartao></app-botao-adicionar-cartao>
+    <app-botoes-navegacao></app-botoes-navegacao>
+    <br><br>
+    <p>CARTÕES ATRASADOS</p>
+    <div *ngFor="let cartao of cartoesAtrasados">
+        <app-cartao-tarefas [cartao]="cartao"></app-cartao-tarefas>
+    </div>
+
+    <div class="po-row">
+    
+        <po-button
+        class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
+        p-label="Editar Cartão"
+        p-type="primary"
+        >
+        </po-button>
+    
+        <po-button
+        class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
+        p-label="Finalizar Cartão"
+        p-type="primary"
+        >
+        </po-button>
+    
+        <po-button
+        class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
+        p-label="Remover Cartão"
+        p-type="primary"
+        >
+        </po-button>
+    
+    </div>
+</po-page-default>
+

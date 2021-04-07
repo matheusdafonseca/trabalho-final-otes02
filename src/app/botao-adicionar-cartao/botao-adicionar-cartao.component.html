@@ -1,0 +1,41 @@
+<div class="po-row">
+    
+    <po-button
+      class="po-xl-12 po-lg-12 po-md-12 po-sm-12"
+      p-icon="po-icon po-icon-plus"
+      p-label="Adicionar Cartão"
+      p-type="primary"
+      (p-click)="openModalAdicionarCartao()"
+    >
+    </po-button>
+
+</div>
+
+<po-modal #modalAdicionarCartao
+  [p-click-out]="true"
+  [p-hide-close]="true"
+  [p-primary-action]="primaryActionAdicionarCartao"
+  [p-secondary-action]="secondaryActionAdicionarCartao"
+  p-size="medium"
+  p-title="Área de Registro do Cartão de Tarefas"
+>
+
+  <form [formGroup]="adicionarCartaoForm" >
+    <div class="po-row">
+      <po-input formControlName="disciplina" class="po-xl-12 po-lg-12 po-md-12 po-sm-12" name="disciplina" p-label="Disciplina:" p-placeholder="Nome da disciplina cursada"> </po-input>
+    </div>
+    
+    <div class="po-row">
+      <po-input formControlName="professor" class="po-xl-12 po-lg-12 po-md-12 po-sm-12" name="professor" p-label="Professor:" p-placeholder="Nome do professor que aplica a matéria"> </po-input>
+    </div>
+
+    <div class="po-row">
+      <po-datepicker formControlName="dataFinalizacao" class="po-xl-12 po-lg-12 po-md-12 po-sm-12" name="data-finalizacao" p-label="Data de Finalização:" p-placeholder="DD/MM/YYYY"> </po-datepicker>
+    </div>
+    
+    <div class="po-row">
+      <po-textarea formControlName="tarefa" class="po-xl-12 po-lg-12 po-md-12 po-sm-12" name="tarefa" p-label="Tarefa:" p-rows="10" p-placeholder="Descreva sua tarefa"></po-textarea>
+    </div>
+  </form>
+
+</po-modal>
