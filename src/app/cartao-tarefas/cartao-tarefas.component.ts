@@ -8,7 +8,7 @@ import { AdicionarCartaoService } from '../services/adicionar-cartao.service';
   styleUrls: ['./cartao-tarefas.component.css']
 })
 export class CartaoTarefasComponent implements OnInit {
-  
+
   @Input() cartao: Cartao;
 
   constructor(private cartaoService: AdicionarCartaoService) { }
@@ -16,7 +16,8 @@ export class CartaoTarefasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  delete(id: number) {
+  // tslint:disable-next-line:typedef
+  deleteCartao(id: number) {
     console.log(id);
     this.cartaoService.deletarCartao(id).subscribe();
   }
