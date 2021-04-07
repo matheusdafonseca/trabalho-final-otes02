@@ -10,27 +10,23 @@ p-height="auto"
     </div>
 
     <div class="po-row">
-    
         <po-button
         class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
         p-label="Editar Cartão"
-        p-type="primary"
-        >
+        p-type="primary">
         </po-button>
-    
+
         <po-button
         class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
         p-label="Finalizar Cartão"
-        p-type="primary"
-        >
+        p-type="primary">
         </po-button>
-    
+
         <po-button
         class="po-xl-4 po-lg-4 po-md-4 po-sm-4"
         p-label="Remover Cartão"
         p-type="primary"
-        >
+        (p-click)="deleteCartao(cartao.id)">
         </po-button>
-    
     </div>
 </po-container>
